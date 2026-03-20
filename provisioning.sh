@@ -12,11 +12,19 @@ sudo apt-get upgrade -y
 
 #install dependencies
 
+<<<<<<< HEAD
 sudo apt-get install -y \
         ca-certificates \
         curl \
         gnupg \
         lsb-release
+=======
+sudo apt-get intsall -y \
+        ca-certificates \
+        curl \
+        gnupg \
+        lsb--release
+>>>>>>> 05c22fcc5cc9ef48a48493aeb9262f7ee816375a
 
 #Docker
 

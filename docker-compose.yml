@@ -1,21 +1,36 @@
 services:
+<<<<<<< HEAD
+=======
+
+>>>>>>> 05c22fcc5cc9ef48a48493aeb9262f7ee816375a
   db:
     image: mysql:8.0
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}
+<<<<<<< HEAD
       MYSQL_USER: ${MYSQL_USER}
+=======
+      MYSQL_-USER: ${MYSQL_USER}
+>>>>>>> 05c22fcc5cc9ef48a48493aeb9262f7ee816375a
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - /mnt/mysql-data:/var/lib/mysql
     networks:
       - wpnet
+<<<<<<< HEAD
 
   wordpress:
     image: wordpress:latest
     container_name: wordpress
     ports:
+=======
+  wordpress:
+    image: wordpress:latest
+    container_name: wordpress
+    ports: 
+>>>>>>> 05c22fcc5cc9ef48a48493aeb9262f7ee816375a
       - "80:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
@@ -25,8 +40,14 @@ services:
     depends_on:
       - db
     networks:
+<<<<<<< HEAD
       - wpnet
 
 networks:
   wpnet: {}
+=======
+      -wpnet
+  networks:
+    wpnet: {}
+>>>>>>> 05c22fcc5cc9ef48a48493aeb9262f7ee816375a
 
